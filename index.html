@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <ul id="playlist" class="playlist">
+            <li data-src="./songs/mbappesong.mp3" > <img src="images/kylian.jpg" alt=""> Song 1</li>
+            <li data-src="./songs/Satranga.mp3"> <img src="images/satranga.jpg" alt=""> Song 2</li>
+            <li data-src="./songs/Arjan-Vailly.mp3"> <img src="images/Animal1.jpg" alt=""> Song 3</li>
+            <li data-src="./songs/Pehle-Bhi-Mai.mp3"> <img src="images/pehlebheemai.jpg" alt=""> Song 4</li>
+  
+         </ul>
+
+         <div class="progress">
+            <div class="status" id="songStatus"> </div>
+            </div>
+
+
+            <div class="container">
+                <button class="prev" onclick="prevTrack()">Prev</button>
+                <button id = "playBtn" class="play" onclick="playTrack()">Play</button>
+                <button id = "pauseBtn"class="pause hide" onclick="pauseTrack()">Pause</button>
+                <button class="next" onclick="nextTrack()">Next</button>
+            </div>
+
+                <input type="range" class="volume" id = "volume-controller" min = "0" max="1" step="0.1" value="0.5" oninput="updateVolume()">
+
+            
+    </div>
+
+    <script src="musicplayer2.js"></script>
+    
+</body>
+</html>
